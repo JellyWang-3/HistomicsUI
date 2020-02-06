@@ -93,7 +93,7 @@ class MockSlicerCLIWebResource(Resource):
     def testAnalysisXmlDetection(self, params):
         """Return the nuclei detection XML spec as a test case."""
         xml_file = os.path.abspath(os.path.join(
-            os.path.dirname(__file__), 'test_analysis_detection.xml'))
+            os.path.dirname(__file__), 'test_files', 'test_analysis_detection.xml'))
         with open(xml_file) as f:
             xml = f.read()
         setResponseHeader('Content-Type', 'application/xml')
@@ -107,7 +107,7 @@ class MockSlicerCLIWebResource(Resource):
     def testAnalysisXmlFeatures(self, params):
         """Return the nuclei feature classification XML spec as a test case."""
         xml_file = os.path.abspath(os.path.join(
-            os.path.dirname(__file__), 'test_analysis_features.xml'))
+            os.path.dirname(__file__), 'test_files', 'test_analysis_features.xml'))
         with open(xml_file) as f:
             xml = f.read()
         setResponseHeader('Content-Type', 'application/xml')
